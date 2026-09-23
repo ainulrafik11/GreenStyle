@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenStyle | Sustainable & Eco-Friendly Fashion Indonesia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e2ebe2',
+                            200: '#c5d7c5',
+                            500: '#588157',
+                            600: '#3a5a40',
+                            700: '#344e41',
+                            800: '#283618',
+                            900: '#19240f'
+                        },
+                        earth: {
+                            100: '#f9f6f0',
+                            200: '#efebd8',
+                            500: '#a3b18a',
+                            600: '#8f9e75',
+                            800: '#5c4d3c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f9f6f0;
+            color: #283618;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .eco-gradient-text {
+            background: linear-gradient(135deg, #2d6a4f 0%, #52b788 50%, #3a5a40 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .eco-card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(52, 78, 65, 0.1);
+        }
+
+        .eco-btn {
+            background: linear-gradient(135deg, #3a5a40 0%, #2d6a4f 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .eco-btn:hover {
+            background: linear-gradient(135deg, #52b788 0%, #3a5a40 100%);
+            box-shadow: 0 8px 20px rgba(58, 90, 64, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f7f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a3b18a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a5a40;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(163, 177, 138, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-earth-100 text-sage-900 antialiased selection:bg-sage-500 selection:text-white">
+
+    <!-- Eco Banner Announcement -->
+    <div class="bg-sage-700 text-earth-100 text-xs font-medium py-2 px-4 text-center tracking-wider flex items-center justify-center gap-2">
+        <i class="fa-solid fa-seedling text-earth-500 animate-bounce"></i>
+        <span>100% MATERIAL ALAMI & BEBAS PESTISIDA &nbsp;|&nbsp; GRATIS ONGKIR DENGAN KEMASAN ZERO-WASTE &nbsp;|&nbsp; 1 PEMBELIAN = 1 POHON DITANAM</span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-earth-100/90 backdrop-blur-md border-b border-earth-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-sage-600 text-white flex items-center justify-center shadow-md group-hover:bg-sage-500 transition-colors">
+                    <i class="fa-solid fa-leaf text-lg group-hover:rotate-12 transition-transform"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-sage-800 block leading-none">GreenStyle</span>
+                    <span class="text-[9px] uppercase tracking-[0.2em] text-sage-600 font-semibold block mt-1">Sustainable Fashion</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-sage-800">
+                <a href="#beranda" class="hover:text-sage-500 transition-colors">Beranda</a>
+                <a href="#katalog" class="hover:text-sage-500 transition-colors">Katalog Pakaian</a>
+                <a href="#kalkulator" class="hover:text-sage-500 transition-colors flex items-center gap-1.5 text-sage-600 font-semibold">
+                    <i class="fa-solid fa-calculator text-xs"></i> Hitung Dampak Eco
+                </a>
+                <a href="#bahan" class="hover:text-sage-500 transition-colors">Bahan Ramah Lingkungan</a>
+                <a href="#komitmen" class="hover:text-sage-500 transition-colors">Komitmen Bumi</a>
+                <a href="#ulasan" class="hover:text-sage-500 transition-colors">Ulasan</a>
+            </nav>
+
+            <!-- Search, Cart & Mobile Toggle Controls -->
+            <div class="flex items-center gap-3">
+                <!-- Search Input Desktop -->
+                <div class="relative hidden sm:block w-48 lg:w-60">
+                    <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Cari katun, linen, bambu..." 
+                        class="w-full bg-white text-xs text-sage-800 border border-earth-200 rounded-full py-2 pl-9 pr-4 focus:outline-none focus:border-sage-500 transition-all placeholder:text-stone-400">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-stone-400"></i>
+                </div>
+
+                <!-- Shopee Direct Shortcut Button -->
+                <a href="https://id.shp.ee/FPf1hF23" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-sm transition-all hover:scale-105" title="Beli di Shopee Official Store">
+                    <i class="fa-solid fa-bag-shopping text-sm"></i>
+                    <span>Toko Shopee</span>
+                </a>
+
+                <!-- Wishlist Icon -->
+                <button onclick="showToast('Produk ditambahkan ke daftar keinginan eco-fashion!')" class="p-2.5 rounded-full hover:bg-earth-200 text-sage-700 hover:text-sage-500 transition-colors" title="Favorit">
+                    <i class="fa-regular fa-heart text-lg"></i>
+                </button>
+
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="p-2.5 rounded-full bg-sage-600 text-white hover:bg-sage-500 transition-all relative group shadow-sm" title="Keranjang Belanja">
+                    <i class="fa-solid fa-bag-shopping text-base"></i>
+                    <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-amber-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-earth-100">0</span>
+                </button>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-sage-800 hover:bg-earth-200">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-earth-100 border-b border-earth-200 px-4 pt-3 pb-6 space-y-3">
+            <div class="relative mb-3">
+                <input type="text" onkeyup="handleSearchMobile(this.value)" placeholder="Cari baju ramah lingkungan..." class="w-full bg-white text-sm text-sage-800 border border-earth-200 rounded-lg py-2 pl-9 pr-4 focus:outline-none focus:border-sage-500">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-xs text-stone-400"></i>
+            </div>
+            <a href="https://id.shp.ee/FPf1hF23" target="_blank" rel="noopener noreferrer" class="block py-2 text-orange-600 font-bold border-b border-earth-200 flex items-center justify-between">
+                <span><i class="fa-solid fa-bag-shopping mr-2"></i> Belanja di Shopee Official</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+            <a href="https://www.instagram.com/green_style_id?stkn=MTRmNDUzcDJ6bGFnbg==" target="_blank" rel="noopener noreferrer" class="block py-2 text-sage-800 font-semibold border-b border-earth-200 flex items-center justify-between">
+                <span><i class="fa-brands fa-instagram mr-2"></i> Instagram @green_style_id</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+            <a href="https://wa.me/6289528328892" target="_blank" rel="noopener noreferrer" class="block py-2 text-emerald-700 font-semibold border-b border-earth-200 flex items-center justify-between">
+                <span><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp (089528328892)</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+            <a href="#beranda" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 border-b border-earth-200">Beranda</a>
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 border-b border-earth-200">Katalog Pakaian</a>
+            <a href="#kalkulator" onclick="toggleMobileMenu()" class="block py-2 text-sage-600 font-semibold border-b border-earth-200">Hitung Dampak Eco</a>
+            <a href="#bahan" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 border-b border-earth-200">Bahan Ramah Lingkungan</a>
+            <a href="#komitmen" onclick="toggleMobileMenu()" class="block py-2 text-sage-800 border-b border-earth-200">Komitmen Bumi</a>
+            <a href="#ulasan" onclick="toggleMobileMenu()" class="block py-2 text-sage-800">Ulasan Pelanggan</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12 lg:py-20">
+        <!-- Background Decorative Natural Shapes -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-sage-200/50 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-earth-500/20 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage-100 border border-sage-200 text-sage-700 text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-recycle text-sage-600"></i>
+                    Koleksi Fashion Berkelanjutan @green_style_id
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight">
+                    STYLISH & SUSTAINABLE <br>
+                    <span class="eco-gradient-text">Fashion for the Planet.</span>
+                </h1>
+                
+                <p class="text-stone-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Baju yang bukan cuma enak & nyaman dipakai, easy di-mix and match, tapi juga tetap peduli sama bumi. Fashion that looks good and feels even better for the planet.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#katalog" class="w-full sm:w-auto eco-btn font-semibold px-8 py-4 rounded-full shadow-lg flex items-center justify-center gap-3 text-sm tracking-wider uppercase">
+                        <span>Jelajahi Koleksi Eco</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#kalkulator" class="w-full sm:w-auto px-8 py-4 rounded-full border border-sage-600 text-sage-700 hover:bg-sage-600 hover:text-white font-semibold transition-all flex items-center justify-center gap-2.5 text-sm">
+                        <i class="fa-solid fa-calculator text-sage-600"></i>
+                        <span>Hitung Hemat Air Kamu</span>
+                    </a>
+                </div>
+
+                <!-- Environmental Impact Quick Counters -->
+                <div class="pt-8 border-t border-earth-200 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <div>
+                        <p class="font-serif text-2xl lg:text-3xl font-bold text-sage-800">100%</p>
+                        <p class="text-xs text-stone-500 uppercase tracking-wider mt-1">Bahan Organik & Alami</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl lg:text-3xl font-bold text-sage-800">12.500+</p>
+                        <p class="text-xs text-stone-500 uppercase tracking-wider mt-1">Pohon Telah Ditanam</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl lg:text-3xl font-bold text-sage-800">0%</p>
+                        <p class="text-xs text-stone-500 uppercase tracking-wider mt-1">Plastik Sekali Pakai</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Hero Image Showcase -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl p-3 bg-white border border-earth-200 shadow-2xl overflow-hidden group">
+                    <div id="heroImageContainer" class="w-full h-full rounded-2xl overflow-hidden relative">
+                        <svg class="w-full h-full object-cover rounded-2xl" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Studio -->
+                            <rect width="400" height="500" fill="#E8EEE7"/>
+                            <circle cx="200" cy="200" r="160" fill="#F4F6F3" opacity="0.6"/>
+                            <!-- GreenStyle Watermark Logo -->
+                            <g transform="translate(130, 30)">
+                                <path d="M60 10 C50 10, 45 20, 30 20 C15 20, 10 10, 0 10 C0 20, 15 35, 30 35 C45 35, 60 20, 60 10 Z" fill="#3A5A40" opacity="0.2"/>
+                                <text x="70" y="22" font-family="serif" font-size="14" font-weight="bold" fill="#3A5A40" letter-spacing="1">GreenStyle</text>
+                                <text x="70" y="32" font-family="sans-serif" font-size="6" font-weight="600" fill="#588157" letter-spacing="1.5">ECO-FRIENDLY FASHION</text>
+                            </g>
+                            <!-- Outfit Illustration Woman (Photo 1) -->
+                            <!-- White Shirt Tie-Front -->
+                            <path d="M130 110 L270 110 L290 190 L260 200 L250 160 L240 230 L220 245 L200 220 L180 245 L160 230 L150 160 L140 200 L110 190 Z" fill="#FFFFFF" stroke="#E2E2E2" stroke-width="2"/>
+                            <!-- Collar & V-Neck -->
+                            <path d="M180 110 L200 155 L220 110 L200 130 Z" fill="#F0F0F0" stroke="#CCCCCC" stroke-width="1.5"/>
+                            <path d="M170 110 L190 145 L200 130 Z" fill="#E8E8E8"/>
+                            <path d="M230 110 L210 145 L200 130 Z" fill="#E8E8E8"/>
+                            <!-- Tie Knot at waist -->
+                            <path d="M190 220 C180 240, 175 250, 185 255 C195 250, 195 235, 200 225 C205 235, 205 250, 215 255 C225 250, 220 240, 210 220 Z" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1.5"/>
+                            <!-- Sage Green Trousers -->
+                            <path d="M152 230 L248 230 L260 480 L210 480 L200 320 L190 480 L140 480 Z" fill="#7C9885"/>
+                            <path d="M152 230 L248 230 L250 260 L150 260 Z" fill="#6B8774"/>
+                            <!-- Pocket Details -->
+                            <path d="M155 240 Q175 250 180 270" stroke="#577360" stroke-width="2" fill="none"/>
+                            <path d="M245 240 Q225 250 220 270" stroke="#577360" stroke-width="2" fill="none"/>
+                            <!-- Tote Bag -->
+                            <path d="M110 210 L140 210 L145 350 L105 350 Z" fill="#EFEBD8" stroke="#DCD5C0" stroke-width="1.5"/>
+                            <path d="M120 210 C120 160, 135 160, 135 210" stroke="#DCD5C0" stroke-width="3" fill="none"/>
+                        </svg>
+                        <a href="https://www.instagram.com/green_style_id?stkn=MTRmNDUzcDJ6bGFnbg==" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 bg-sage-800/90 hover:bg-sage-700 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md flex items-center gap-1.5 transition-all">
+                            <i class="fa-brands fa-instagram text-amber-400"></i> @green_style_id Look
+                        </a>
+                    </div>
+
+                    <!-- Floating Eco Badge -->
+                    <div class="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl border border-sage-200 shadow-lg z-20 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-sage-600 text-white flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-droplet text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-sage-600 uppercase tracking-wider">Koleksi Asli Instagram</p>
+                            <h4 class="text-xs font-bold text-sage-900">Nyaman Dipakai & Easy Di-Mix</h4>
+                            <p class="text-[10px] text-stone-500">Kapas Organik & Serat Linen Alami</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights / Sustainability Pillars -->
+    <section id="komitmen" class="py-16 bg-white border-y border-earth-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1 -->
+                <div class="p-6 rounded-2xl bg-earth-100 border border-earth-200 hover:border-sage-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-cotton-bureau"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">100% Kapas Organik</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Ditanam tanpa pestisida sintetis atau pupuk kimia berbahaya, menjaga tanah tetap subur & sehat.</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-6 rounded-2xl bg-earth-100 border border-earth-200 hover:border-sage-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Fair Trade & Etis</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Menjamin upah layak dan lingkungan kerja yang aman bagi para penjahit lokal Indonesia.</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-6 rounded-2xl bg-earth-100 border border-earth-200 hover:border-sage-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Kemasan Biodegradable</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Seluruh paket dikemas menggunakan kotak daur ulang dan kantong singkong (*cassava bag*) yang dapat terurai.</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="p-6 rounded-2xl bg-earth-100 border border-earth-200 hover:border-sage-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Program 1 Pakaian = 1 Pohon</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Setiap transaksi Anda langsung berkontribusi pada penanaman pohon mangrove di pesisir Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Eco Impact Calculator -->
+    <section id="kalkulator" class="py-16 bg-sage-700 text-earth-100 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-earth-500 text-xs font-bold uppercase tracking-widest block mb-1">Fitur Interaktif</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Kalkulator Penghematan Lingkungan</h2>
+                <p class="text-sage-100 text-xs sm:text-sm mt-2">Bandingkan dampak pembelian pakaian GreenStyle dengan produk fast fashion biasa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-sage-800 p-6 sm:p-10 rounded-3xl border border-sage-600 shadow-2xl">
+                <!-- Inputs Controls -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold text-earth-500 uppercase tracking-wider mb-2">1. Berapa pakaian yang biasa Anda beli per tahun?</label>
+                        <input type="range" id="clothesCount" min="1" max="20" value="5" oninput="calculateEcoImpact()" class="w-full accent-earth-500 cursor-pointer">
+                        <div class="flex justify-between text-xs text-sage-200 font-semibold mt-1">
+                            <span>1 Pakaian</span>
+                            <span id="clothesDisplay" class="text-amber-400 font-bold text-sm">5 Pakaian</span>
+                            <span>20 Pakaian</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-earth-500 uppercase tracking-wider mb-2">2. Pilih Jenis Bahan Dominan:</label>
+                        <select id="calcMaterial" onchange="calculateEcoImpact()" class="w-full bg-sage-900 border border-sage-600 text-white rounded-xl py-3 px-4 text-xs focus:outline-none focus:border-earth-500">
+                            <option value="bamboo">Serat Bambu Organik (Paling Hemat Air)</option>
+                            <option value="cotton">100% Kapas Organik Terverifikasi</option>
+                            <option value="tencel">Tencel / Lyocell Kayu Berkelanjutan</option>
+                            <option value="recycled">Poliester Daur Ulang Botol Plastik</option>
+                        </select>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-sage-900/60 border border-sage-600 text-xs text-sage-200">
+                        <i class="fa-solid fa-lightbulb text-amber-400 mr-2"></i>
+                        <span>Produksi 1 kaos kapas sintetis fast fashion biasa membutuhkan sekitar 2.700 Liter air. Dengan GreenStyle Anda menghemat hingga 85% air tersebut!</span>
+                    </div>
+                </div>
+
+                <!-- Outputs Results Display -->
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-sage-900/90 border border-earth-500/30 text-center">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-earth-500/20 text-earth-500 flex items-center justify-center text-xl mb-2">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h4 class="text-xs uppercase text-sage-200 font-bold tracking-wider">Air Yang Dihemat</h4>
+                        <p id="waterSavedOutput" class="font-serif text-3xl font-bold text-amber-400 mt-2">11.475 L</p>
+                        <p class="text-[10px] text-stone-400 mt-1">Setara dengan kebutuhan minum 5,7 tahun</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-sage-900/90 border border-earth-500/30 text-center">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-earth-500/20 text-earth-500 flex items-center justify-center text-xl mb-2">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                        </div>
+                        <h4 class="text-xs uppercase text-sage-200 font-bold tracking-wider">Emisi CO2 Ditekan</h4>
+                        <p id="co2SavedOutput" class="font-serif text-3xl font-bold text-amber-400 mt-2">22,5 kg</p>
+                        <p class="text-[10px] text-stone-400 mt-1">Sama dengan menanam 2 pohon dewasa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="katalog" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Title & Sorting Controls -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+            <div>
+                <span class="text-sage-600 text-xs font-bold uppercase tracking-widest block mb-1">Katalog Ramah Lingkungan</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900">Pakaian Ramah Lingkungan Pilihan</h2>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <select id="sortSelect" onchange="renderProducts()" class="bg-white border border-earth-200 text-xs text-sage-800 rounded-xl px-4 py-2.5 focus:outline-none focus:border-sage-500 shadow-sm">
+                    <option value="featured">Urutan: Unggulan Rekomendasi</option>
+                    <option value="price-low">Harga: Terendah ke Tertinggi</option>
+                    <option value="price-high">Harga: Tertinggi ke Terendah</option>
+                    <option value="eco-impact">Dampak Eco Tertinggi</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Filter Material Category Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 border-b border-earth-200 scrollbar-none">
+            <button onclick="filterCategory('all')" class="category-btn active px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all bg-sage-700 text-white shadow-sm" data-cat="all">Semua Postingan IG</button>
+            <button onclick="filterCategory('wanita')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all bg-white text-sage-800 border border-earth-200 hover:bg-earth-200" data-cat="wanita">Koleksi Wanita (Foto 1 & 2)</button>
+            <button onclick="filterCategory('pria')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all bg-white text-sage-800 border border-earth-200 hover:bg-earth-200" data-cat="pria">Koleksi Pria (Foto 3 & 4)</button>
+            <button onclick="filterCategory('aksesori')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all bg-white text-sage-800 border border-earth-200 hover:bg-earth-200" data-cat="aksesori">Tas Kanvas Eco</button>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Content dynamically built by JS -->
+        </div>
+    </section>
+
+    <!-- Eco Materials Spotlight Section -->
+    <section id="bahan" class="py-20 bg-earth-200/50 border-y border-earth-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-sage-600 text-xs font-bold uppercase tracking-widest block mb-1">Pilihan Bahan Kami</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900">Mengenal Material Ramah Lingkungan</h2>
+                <p class="text-stone-600 text-xs sm:text-sm mt-2">Setiap helai benang dipilih untuk memberikan kenyamanan maksimal bagi kulit sekaligus melindungi bumi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Material Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Serat Bambu Organik</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-4">Sangat lembut di kulit, hypoallergenic, dan memiliki sifat anti-bakteri alami. Tumbuh cepat tanpa bantuan pupuk pestisida.</p>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 font-semibold text-[10px] rounded-full w-max">Penghematan Air: 85%</span>
+                </div>
+
+                <!-- Material Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-cotton-bureau"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Katun Organik GOTS</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-4">Dipanen secara manual dari tanaman non-GMO. Mengurangi polusi air hingga 98% dibanding kapas konvensional.</p>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-amber-50 text-amber-700 font-semibold text-[10px] rounded-full w-max">Bebas Pestisida Sintentis</span>
+                </div>
+
+                <!-- Material Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Tencel™ Lyocell</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-4">Diproduksi dari serat kayu terbarukan dengan sistem closed-loop yang mendaur ulang 99% pelarut dan air produksi.</p>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 font-semibold text-[10px] rounded-full w-max">Sistem Closed-Loop 99%</span>
+                </div>
+
+                <!-- Material Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-sage-800 mb-2">Ocean Recycled Polyester</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-4">Mengolah sampah botol plastik yang diambil dari lautan Indonesia menjadi benang sintetis berkualitas tinggi.</p>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-teal-50 text-teal-700 font-semibold text-[10px] rounded-full w-max">Daur Ulang Plastik Laut</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Customer Reviews -->
+    <section id="ulasan" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-14">
+            <span class="text-sage-600 text-xs font-bold uppercase tracking-widest block mb-1">Testimoni Komunitas</span>
+            <h2 class="font-serif text-3xl font-bold text-sage-900">Kata Mereka tentang GreenStyle</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs gap-1 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed italic">"Kaos serat bambunya dingin banget di kulit dan nggak gampang bau walaupun dipake seharian di cuaca Jakarta yang panas. Bahagia bisa bergaya sambil bantu bumi!"</p>
+                </div>
+                <div class="flex items-center gap-3 mt-6 pt-4 border-t border-earth-100">
+                    <div class="w-9 h-9 rounded-full bg-sage-600 text-white font-bold flex items-center justify-center text-xs">
+                        AM
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-sage-900">Anindya Maharani</h4>
+                        <p class="text-[10px] text-stone-400">Verified Buyer • Jakarta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs gap-1 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed italic">"Pengemasan tanpa plastik sama sekali, pake kotak kardus daur ulang yang rapi. Kemeja linen-nya pas banget di badan, potongan jahitannya presisi tinggi."</p>
+                </div>
+                <div class="flex items-center gap-3 mt-6 pt-4 border-t border-earth-100">
+                    <div class="w-9 h-9 rounded-full bg-sage-600 text-white font-bold flex items-center justify-center text-xs">
+                        DR
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-sage-900">Dicky Ramadhan</h4>
+                        <p class="text-[10px] text-stone-400">Verified Buyer • Bandung</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-earth-200 eco-card-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs gap-1 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed italic">"Kalkulator hemat airnya sangat mengedukasi! Dapet sertifikat penanaman pohon juga lewat email. Senang banget nemu brand lokal yang komit sustainable fashion."</p>
+                </div>
+                <div class="flex items-center gap-3 mt-6 pt-4 border-t border-earth-100">
+                    <div class="w-9 h-9 rounded-full bg-sage-600 text-white font-bold flex items-center justify-center text-xs">
+                        S
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-sage-900">Siti Nurhaliza</h4>
+                        <p class="text-[10px] text-stone-400">Verified Buyer • Yogyakarta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Slide-Over Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div id="cartPanel" class="w-screen max-w-md bg-white border-l border-earth-200 text-sage-900 transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto flex flex-col">
+                <!-- Cart Header -->
+                <div class="p-5 border-b border-earth-200 flex items-center justify-between bg-earth-100">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-sage-600"></i>
+                        <h3 class="font-serif text-lg font-bold text-sage-900">Keranjang Belanja</h3>
+                        <span id="cartDrawerCount" class="text-xs px-2 py-0.5 rounded-full bg-sage-200 text-sage-800 font-semibold">(0)</span>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="p-2 text-stone-400 hover:text-stone-700">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Cart Items Container -->
+                <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-4">
+                    <!-- Dynamic Cart Elements -->
+                </div>
+
+                <!-- Cart Summary & Checkout Action -->
+                <div class="p-5 border-t border-earth-200 bg-earth-100 space-y-4">
+                    <div class="space-y-1.5 text-xs">
+                        <div class="flex justify-between text-stone-600">
+                            <span>Subtotal Produk</span>
+                            <span id="cartSubtotal">Rp 0</span>
+                        </div>
+                        <div class="flex justify-between text-stone-600">
+                            <span>Kemasan Ramah Lingkungan</span>
+                            <span class="text-emerald-700 font-semibold">GRATIS Zero-Waste</span>
+                        </div>
+                        <div class="flex justify-between text-stone-600">
+                            <span>Donasi Pohon</span>
+                            <span class="text-sage-600 font-semibold">Termasuk (1 Pohon)</span>
+                        </div>
+                        <div class="flex justify-between text-base font-bold text-sage-900 pt-2 border-t border-earth-200">
+                            <span>Total Pembayaran</span>
+                            <span id="cartTotal" class="text-sage-700">Rp 0</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openCheckoutModal()" id="checkoutBtn" disabled class="w-full eco-btn font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span>Lanjut Pembayaran</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Product Detail Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-3xl bg-white border border-earth-200 rounded-3xl overflow-hidden shadow-2xl my-8 max-h-[90vh] flex flex-col">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-earth-100 border border-earth-200 text-stone-500 hover:text-stone-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="p-6 sm:p-8 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Product Image Showcase -->
+                <div class="space-y-3">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-earth-100 border border-earth-200">
+                        <img id="qvImage" src="" alt="Detail Produk" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-xs text-sage-700 bg-sage-100 py-2 rounded-xl border border-sage-200">
+                        <i class="fa-solid fa-seedling"></i> 100% Sertifikasi Material Berkelanjutan
+                    </div>
+                </div>
+
+                <!-- Product Detail Text -->
+                <div class="space-y-4">
+                    <span id="qvBadge" class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">Kapas Organik</span>
+                    <h3 id="qvTitle" class="font-serif text-2xl font-bold text-sage-900">Nama Produk</h3>
+                    <div class="flex items-center gap-3">
+                        <p id="qvPrice" class="text-2xl font-bold text-sage-700">Rp 0</p>
+                        <p id="qvOldPrice" class="text-sm text-stone-400 line-through">Rp 0</p>
+                    </div>
+
+                    <p id="qvDescription" class="text-xs text-stone-600 leading-relaxed">Deskripsi produk...</p>
+
+                    <!-- Eco Impact Highlight Box -->
+                    <div class="p-3 bg-earth-100 rounded-xl border border-earth-200 space-y-1 text-xs">
+                        <div class="flex items-center justify-between text-sage-800 font-semibold">
+                            <span><i class="fa-solid fa-droplet text-blue-600 mr-1.5"></i> Air Dihemat:</span>
+                            <span id="qvWaterSaved" class="text-emerald-700">2.700 Liter</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sage-800 font-semibold">
+                            <span><i class="fa-solid fa-plant-wilt text-amber-600 mr-1.5"></i> Pestisida Kimia:</span>
+                            <span class="text-emerald-700">0% (Bebas Kimia)</span>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div>
+                        <label class="block text-[11px] font-bold text-sage-800 uppercase mb-2">Pilih Ukuran:</label>
+                        <div class="flex gap-2">
+                            <button onclick="selectSize(this)" class="size-btn px-3.5 py-2 rounded-lg border border-earth-200 text-xs font-semibold text-sage-800 hover:border-sage-600 active bg-sage-700 text-white">S</button>
+                            <button onclick="selectSize(this)" class="size-btn px-3.5 py-2 rounded-lg border border-earth-200 text-xs font-semibold text-sage-800 hover:border-sage-600">M</button>
+                            <button onclick="selectSize(this)" class="size-btn px-3.5 py-2 rounded-lg border border-earth-200 text-xs font-semibold text-sage-800 hover:border-sage-600">L</button>
+                            <button onclick="selectSize(this)" class="size-btn px-3.5 py-2 rounded-lg border border-earth-200 text-xs font-semibold text-sage-800 hover:border-sage-600">XL</button>
+                        </div>
+                    </div>
+
+                    <button id="qvAddToCartBtn" onclick="" class="w-full eco-btn font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wider mt-4">
+                        <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-xl bg-white border border-earth-200 rounded-3xl overflow-hidden shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center gap-2 mb-6 border-b border-earth-200 pb-4">
+                <i class="fa-solid fa-leaf text-sage-600 text-xl"></i>
+                <h3 class="font-serif text-xl font-bold text-sage-900">Checkout Pesanan Ramah Lingkungan</h3>
+            </div>
+
+            <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-sage-800 mb-1">Nama Lengkap *</label>
+                    <input type="text" required placeholder="Budi Santoso" class="w-full bg-earth-100 border border-earth-200 rounded-xl px-4 py-2.5 text-xs text-sage-900 focus:outline-none focus:border-sage-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-sage-800 mb-1">Nomor WhatsApp *</label>
+                        <input type="tel" required placeholder="089528328892" class="w-full bg-earth-100 border border-earth-200 rounded-xl px-4 py-2.5 text-xs text-sage-900 focus:outline-none focus:border-sage-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-sage-800 mb-1">Email (Untuk E-Sertifikat Pohon)</label>
+                        <input type="email" placeholder="budi@example.com" class="w-full bg-earth-100 border border-earth-200 rounded-xl px-4 py-2.5 text-xs text-sage-900 focus:outline-none focus:border-sage-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-sage-800 mb-1">Alamat Pengiriman Lengkap *</label>
+                    <textarea required rows="2" placeholder="Jl. Hijau Kelestarian No. 45, Jakarta Selatan" class="w-full bg-earth-100 border border-earth-200 rounded-xl px-4 py-2.5 text-xs text-sage-900 focus:outline-none focus:border-sage-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-sage-800 mb-2">Pilih Metode Pembayaran</label>
+                    <div class="grid grid-cols-3 gap-3">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="qris" checked class="peer sr-only">
+                            <div class="p-3 rounded-xl border border-earth-200 bg-earth-100 peer-checked:border-sage-600 peer-checked:bg-sage-100 text-center transition-all">
+                                <i class="fa-solid fa-qrcode text-sage-600 text-lg block mb-1"></i>
+                                <span class="text-[10px] font-bold text-sage-900 block">QRIS Instant</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="bca" class="peer sr-only">
+                            <div class="p-3 rounded-xl border border-earth-200 bg-earth-100 peer-checked:border-sage-600 peer-checked:bg-sage-100 text-center transition-all">
+                                <i class="fa-solid fa-building-columns text-sage-600 text-lg block mb-1"></i>
+                                <span class="text-[10px] font-bold text-sage-900 block">Transfer Bank</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="ewallet" class="peer sr-only">
+                            <div class="p-3 rounded-xl border border-earth-200 bg-earth-100 peer-checked:border-sage-600 peer-checked:bg-sage-100 text-center transition-all">
+                                <i class="fa-solid fa-wallet text-sage-600 text-lg block mb-1"></i>
+                                <span class="text-[10px] font-bold text-sage-900 block">GoPay / Shopee</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-earth-200 flex items-center justify-between">
+                    <div>
+                        <span class="text-[11px] text-stone-500 block">Total Tagihan:</span>
+                        <span id="checkoutTotalDisplay" class="text-xl font-bold text-sage-700">Rp 0</span>
+                    </div>
+                    <button type="submit" class="eco-btn font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider">
+                        Konfirmasi Pesanan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-sage-800 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none border border-sage-600">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toastMessage" class="text-xs font-medium">Pesan notifikasi...</span>
+    </div>
+
+    <!-- Floating Quick Access Buttons (Shopee & WhatsApp) -->
+    <div class="fixed bottom-6 left-6 z-40 flex flex-col gap-2.5">
+        <a href="https://id.shp.ee/FPf1hF23" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-xl flex items-center gap-2 text-xs font-bold transition-all hover:scale-105 group" title="Kunjungi Shopee Official Store">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300">Shopee Store</span>
+        </a>
+        <a href="https://wa.me/6289528328892" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white p-3 rounded-full shadow-xl flex items-center gap-2 text-xs font-bold transition-all hover:scale-105 group" title="Chat WhatsApp 089528328892">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300">089528328892</span>
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-sage-900 text-earth-100 pt-16 pb-8 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-sage-800">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-sage-600 text-white flex items-center justify-center">
+                        <i class="fa-solid fa-leaf text-sm"></i>
+                    </div>
+                    <span class="font-serif text-xl font-bold text-white">GreenStyle</span>
+                </a>
+                <p class="text-sage-200 leading-relaxed">Pelopor pakaian ramah lingkungan berbasis material alami dan etis di Indonesia. Menghubungkan gaya hidup modern dengan kelestarian alam.</p>
+                <div class="flex space-x-3 text-sage-200 text-base">
+                    <a href="https://www.instagram.com/green_style_id?stkn=MTRmNDUzcDJ6bGFnbg==" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400" title="Instagram @green_style_id"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://id.shp.ee/FPf1hF23" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400" title="Official Shopee Store"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="https://wa.me/6289528328892" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400" title="WhatsApp 089528328892"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Nav Links -->
+            <div>
+                <h4 class="font-serif text-sm font-bold text-white mb-4 uppercase tracking-wider">Navigasi Eco</h4>
+                <ul class="space-y-2 text-sage-200">
+                    <li><a href="#katalog" class="hover:text-emerald-400 transition-colors">Semua Koleksi</a></li>
+                    <li><a href="https://id.shp.ee/FPf1hF23" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Pintasan Toko Shopee</a></li>
+                    <li><a href="#kalkulator" class="hover:text-emerald-400 transition-colors">Kalkulator Penghematan Air</a></li>
+                    <li><a href="#bahan" class="hover:text-emerald-400 transition-colors">Informasi Bahan Organik</a></li>
+                    <li><a href="#komitmen" class="hover:text-emerald-400 transition-colors">Penanaman Pohon</a></li>
+                </ul>
+            </div>
+
+            <!-- Eco Store Address -->
+            <div>
+                <h4 class="font-serif text-sm font-bold text-white mb-4 uppercase tracking-wider">Green Store & Contact</h4>
+                <ul class="space-y-2 text-sage-200">
+                    <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> <a href="https://wa.me/6289528328892" target="_blank" rel="noopener noreferrer" class="hover:underline">WhatsApp: 089528328892</a></li>
+                    <li><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i> **Jakarta**: Kemang Selatan No. 18B</li>
+                    <li><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i> **Bali**: Ubud Monkey Forest St. 42</li>
+                    <li><i class="fa-solid fa-clock text-emerald-400 mr-2"></i> Buka: 09.00 - 20.00 WIB</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Eco Club -->
+            <div class="space-y-3">
+                <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Join Eco Club</h4>
+                <p class="text-sage-200">Dapatkan voucher diskon 10% dan e-book gratis gaya hidup ramah lingkungan.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email Anda..." class="bg-sage-800 text-xs px-3 py-2.5 rounded-l-xl border border-sage-700 text-white focus:outline-none w-full">
+                    <button onclick="showToast('Terima kasih telah bergabung dengan Eco Club!')" class="eco-btn px-4 rounded-r-xl font-bold"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 flex flex-col sm:flex-row items-center justify-between text-sage-300 text-[11px] gap-4">
+            <p>© 2026 GreenStyle Sustainable Fashion. Hak Cipta Dilindungi.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white">Syarat & Ketentuan</a>
+                <a href="#" class="hover:text-white">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white">Laporan Keberlanjutan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Script -->
+    <script>
+        function getIGProductSVG(type) {
+            const svgHeader = `<svg class="w-full h-full object-cover" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="400" fill="#F2F0E9"/>
+                <!-- Background Wood Rack & Hanger Bar -->
+                <rect x="0" y="35" width="320" height="12" fill="#B58D63"/>
+                <g transform="translate(120, 10)">
+                    <!-- Wooden Hanger -->
+                    <path d="M40 25 L5 65 C0 70, 10 75, 15 72 L40 42 L65 72 C70 75, 80 70, 75 65 Z" fill="#D4A373"/>
+                    <path d="M40 10 C32 10, 32 25, 40 25 C45 25, 48 18, 43 14" stroke="#8C6D46" stroke-width="3" fill="none"/>
+                </g>
+                <!-- IG Brand Tag Overlay -->
+                <text x="15" y="25" font-family="sans-serif" font-size="9" font-weight="bold" fill="#3A5A40" letter-spacing="1">@green_style_id</text>`;
+            const svgFooter = `</svg>`;
+
+            let content = '';
+
+            switch(type) {
+                case 'tie-front': // Foto 1 & 2 - White Tie Front Shirt
+                    content = `
+                        <!-- White Tie Front Shirt -->
+                        <g transform="translate(45, 65)">
+                            <path d="M30 15 L200 15 L225 90 L195 100 L185 60 L180 140 L160 155 L115 130 L70 155 L50 140 L45 60 L35 100 L5 90 Z" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1.5"/>
+                            <path d="M95 15 L115 65 L135 15 L115 35 Z" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="1"/>
+                            <circle cx="115" cy="70" r="2.5" fill="#B58D63"/>
+                            <circle cx="115" cy="95" r="2.5" fill="#B58D63"/>
+                            <path d="M100 130 C90 150, 85 160, 95 165 C105 160, 105 145, 115 135 C125 145, 125 160, 135 165 C145 160, 140 150, 130 130 Z" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="1.5"/>
+                        </g>`;
+                    break;
+
+                case 'sage-pants': // Foto 1 & 2 - Sage Trousers
+                    content = `
+                        <!-- Sage Green High-Waist Pants -->
+                        <g transform="translate(70, 70)">
+                            <path d="M20 0 L160 0 L175 280 L125 280 L90 120 L55 280 L5 280 Z" fill="#7C9885"/>
+                            <path d="M20 0 L160 0 L162 30 L18 30 Z" fill="#6B8774"/>
+                            <line x1="90" y1="30" x2="90" y2="120" stroke="#5C7865" stroke-width="1.5"/>
+                            <path d="M25 15 Q45 25 50 50" stroke="#5C7865" stroke-width="2" fill="none"/>
+                            <path d="M155 15 Q135 25 130 50" stroke="#5C7865" stroke-width="2" fill="none"/>
+                        </g>`;
+                    break;
+
+                case 'beige-blazer': // Foto 2 - Beige Blazer
+                    content = `
+                        <!-- Beige Linen Blazer -->
+                        <g transform="translate(35, 60)">
+                            <path d="M20 20 L230 20 L245 190 L210 195 L200 170 L195 210 L55 210 L50 170 L40 195 L5 190 Z" fill="#E6DFD3" stroke="#D3C9B8" stroke-width="1.5"/>
+                            <path d="M75 20 L110 110 L125 110 L95 20 Z" fill="#D8CFBF"/>
+                            <path d="M175 20 L140 110 L125 110 L155 20 Z" fill="#D8CFBF"/>
+                            <rect x="30" y="140" width="45" height="30" rx="3" fill="#DDD3C3" stroke="#C5BAA8"/>
+                            <rect x="175" y="140" width="45" height="30" rx="3" fill="#DDD3C3" stroke="#C5BAA8"/>
+                            <circle cx="110" cy="130" r="3.5" fill="#785938"/>
+                            <circle cx="110" cy="165" r="3.5" fill="#785938"/>
+                        </g>`;
+                    break;
+
+                case 'camel-vest': // Foto 2 - Camel Vest
+                    content = `
+                        <!-- Camel Earth Vest -->
+                        <g transform="translate(65, 65)">
+                            <path d="M25 15 L165 15 L180 150 L140 170 L95 140 L50 170 L10 150 Z" fill="#C19A6B" stroke="#A88254" stroke-width="1.5"/>
+                            <path d="M65 15 L95 70 L125 15 Z" fill="#A88254"/>
+                            <circle cx="95" cy="80" r="3" fill="#5C4223"/>
+                            <circle cx="95" cy="102" r="3" fill="#5C4223"/>
+                            <circle cx="95" cy="124" r="3" fill="#5C4223"/>
+                        </g>`;
+                    break;
+
+                case 'olive-sage-long': // Foto 3 & 4 - Men's Long Sleeve Olive Sage Shirt
+                    content = `
+                        <!-- Men's Olive Sage Long Sleeve Shirt -->
+                        <g transform="translate(40, 60)">
+                            <path d="M30 20 L210 20 L235 210 L200 215 L190 190 L180 230 L60 230 L50 190 L40 215 L5 210 Z" fill="#6B8774" stroke="#577360" stroke-width="1.5"/>
+                            <path d="M85 20 L120 60 L155 20 L120 35 Z" fill="#577360"/>
+                            <rect x="145" y="80" width="35" height="40" rx="2" fill="#5E7A67" stroke="#4C6855"/>
+                            <line x1="120" y1="35" x2="120" y2="230" stroke="#577360" stroke-width="2"/>
+                            <circle cx="120" cy="65" r="2.5" fill="#EFEBD8"/>
+                            <circle cx="120" cy="95" r="2.5" fill="#EFEBD8"/>
+                            <circle cx="120" cy="125" r="2.5" fill="#EFEBD8"/>
+                            <circle cx="120" cy="155" r="2.5" fill="#EFEBD8"/>
+                        </g>`;
+                    break;
+
+                case 'cream-tee': // Foto 3 & 4 - Cream Organic Tee
+                    content = `
+                        <!-- Cream Organic Crewneck Tee -->
+                        <g transform="translate(50, 65)">
+                            <path d="M30 15 L190 15 L215 85 L180 95 L170 60 L165 210 L55 210 L50 60 L40 95 L5 85 Z" fill="#F5F0E6" stroke="#E2DAA8" stroke-width="1.5"/>
+                            <path d="M85 15 C85 35, 135 35, 135 15 Z" fill="#E8E0D2" stroke="#D3C8B4" stroke-width="1.5"/>
+                        </g>`;
+                    break;
+
+                case 'sage-short-shirt': // Foto 3 - Short Sleeve Sage Shirt
+                    content = `
+                        <!-- Men's Short Sleeve Sage Shirt -->
+                        <g transform="translate(45, 60)">
+                            <path d="M30 20 L200 20 L225 100 L190 110 L180 65 L175 220 L55 220 L50 65 L40 110 L5 100 Z" fill="#7C9885" stroke="#688571" stroke-width="1.5"/>
+                            <path d="M85 20 L115 55 L145 20 L115 32 Z" fill="#688571"/>
+                            <rect x="140" y="75" width="32" height="38" rx="2" fill="#688571"/>
+                            <line x1="115" y1="32" x2="115" y2="220" stroke="#688571" stroke-width="2"/>
+                            <circle cx="115" cy="60" r="2.5" fill="#FFFFFF"/>
+                            <circle cx="115" cy="90" r="2.5" fill="#FFFFFF"/>
+                            <circle cx="115" cy="120" r="2.5" fill="#FFFFFF"/>
+                        </g>`;
+                    break;
+
+                case 'khaki-trousers': // Foto 3 & 4 - Men's Khaki Trousers
+                    content = `
+                        <!-- Men's Khaki Trousers -->
+                        <g transform="translate(70, 70)">
+                            <path d="M15 0 L165 0 L175 280 L125 280 L90 110 L55 280 L5 280 Z" fill="#D3C5A3" stroke="#BFB18F" stroke-width="1.5"/>
+                            <path d="M15 0 L165 0 L167 30 L13 30 Z" fill="#C4B694"/>
+                            <line x1="90" y1="30" x2="90" y2="110" stroke="#B2A482" stroke-width="1.5"/>
+                        </g>`;
+                    break;
+
+                case 'canvas-backpack': // Foto 3 - Backpack Canvas
+                    content = `
+                        <!-- Cream Canvas Backpack -->
+                        <g transform="translate(80, 110)">
+                            <rect x="15" y="30" width="130" height="170" rx="20" fill="#EFEBD8" stroke="#D3CBAF" stroke-width="2"/>
+                            <path d="M10 50 Q80 10 150 50 L145 90 L15 90 Z" fill="#E2DCBF" stroke="#CBBFA2" stroke-width="1.5"/>
+                            <rect x="65" y="70" width="30" height="60" rx="4" fill="#B58D63"/>
+                            <circle cx="80" cy="115" r="4" fill="#D4A373"/>
+                            <rect x="35" y="110" width="90" height="70" rx="8" fill="#E5DFCA" stroke="#CBBFA2"/>
+                        </g>`;
+                    break;
+
+                case 'canvas-tote': // Foto 1 & 2 - Tote Bag Canvas
+                    content = `
+                        <!-- Cream Canvas Tote Bag -->
+                        <g transform="translate(85, 100)">
+                            <rect x="20" y="70" width="110" height="150" rx="6" fill="#EFEBD8" stroke="#D9D2B9" stroke-width="2"/>
+                            <path d="M45 70 C45 15, 105 15, 105 70" stroke="#C2BA9E" stroke-width="5" fill="none"/>
+                            <text x="75" y="140" font-family="serif" font-size="10" font-weight="bold" fill="#3A5A40" text-anchor="middle">GreenStyle</text>
+                        </g>`;
+                    break;
+            }
+
+            return 'data:image/svg+xml;utf8,' + encodeURIComponent(svgHeader + content + svgFooter);
+        }
+
+        // Database Produk Eco Fashion (Eksklusif Postingan IG @green_style_id)
+        const products = [
+            {
+                id: 'gs-01',
+                name: 'Kemeja Tie-Front Linen "Earth White"',
+                category: 'wanita',
+                price: 289000,
+                oldPrice: 349000,
+                rating: 5.0,
+                reviewsCount: 74,
+                image: getIGProductSVG('tie-front'),
+                badge: 'Foto 1 & 2 • Easy Mix',
+                waterSaved: '2.400 Liter',
+                description: 'Kemeja katun-linen organik lengan pendek aksen simpul tali depan (tie-front) warna putih bersih seperti pada postingan Foto 1 & 2 IG @green_style_id.'
+            },
+            {
+                id: 'gs-02',
+                name: 'Celana High-Waist Linen "Sage Relaxed"',
+                category: 'wanita',
+                price: 329000,
+                oldPrice: 399000,
+                rating: 4.9,
+                reviewsCount: 92,
+                image: getIGProductSVG('sage-pants'),
+                badge: 'Foto 1 & 2 • Sage Look',
+                waterSaved: '2.800 Liter',
+                description: 'Celana kulot relaxed fit berbahan 100% linen rami alami warna sage green khas @green_style_id. Dilengkapi saku samping dan pinggang elastis.'
+            },
+            {
+                id: 'gs-03',
+                name: 'Linen Oversized Blazer "Beige Minimalist"',
+                category: 'wanita',
+                price: 459000,
+                oldPrice: 529000,
+                rating: 4.9,
+                reviewsCount: 48,
+                image: getIGProductSVG('beige-blazer'),
+                badge: 'Foto 2 • Outer Wear',
+                waterSaved: '3.100 Liter',
+                description: 'Blazer berpotongan oversized dengan bahan serat linen organik natural warna cream/beige seperti tampilan hanger pada Foto 2.'
+            },
+            {
+                id: 'gs-04',
+                name: 'Vest Button-Down Linen "Camel Earth"',
+                category: 'wanita',
+                price: 249000,
+                oldPrice: 299000,
+                rating: 4.8,
+                reviewsCount: 36,
+                image: getIGProductSVG('camel-vest'),
+                badge: 'Foto 2 • Chic Layer',
+                waterSaved: '1.900 Liter',
+                description: 'Rompi/vest linen tanpa lengan dengan kancing depan warna camel earth. Pilihan layering terbaik sesuai konsep mix and match GreenStyle.'
+            },
+            {
+                id: 'gs-05',
+                name: 'Kemeja Lengan Panjang Linen "Olive Sage"',
+                category: 'pria',
+                price: 349000,
+                oldPrice: 419000,
+                rating: 5.0,
+                reviewsCount: 65,
+                image: getIGProductSVG('olive-sage-long'),
+                badge: 'Foto 3 & 4 • Men\'s Look',
+                waterSaved: '2.700 Liter',
+                description: 'Kemeja pria lengan panjang berbahan linen organik warna olive sage green seperti yang dipakai model pria pada Foto 4.'
+            },
+            {
+                id: 'gs-06',
+                name: 'Basic Crewneck Tee "Organic Natural Cream"',
+                category: 'pria',
+                price: 179000,
+                oldPrice: 219000,
+                rating: 4.9,
+                reviewsCount: 110,
+                image: getIGProductSVG('cream-tee'),
+                badge: 'Foto 3 & 4 • Inner Essential',
+                waterSaved: '1.800 Liter',
+                description: 'Kaos dalaman polos unisex berbahan 100% kapas organik warna cream unbleached. Nyaman dan adem dipadukan dengan kemeja outer.'
+            },
+            {
+                id: 'gs-07',
+                name: 'Kemeja Lengan Pendek Linen "Sage Green"',
+                category: 'pria',
+                price: 299000,
+                oldPrice: 359000,
+                rating: 4.9,
+                reviewsCount: 58,
+                image: getIGProductSVG('sage-short-shirt'),
+                badge: 'Foto 3 • Casual Men',
+                waterSaved: '2.200 Liter',
+                description: 'Kemeja pria lengan pendek berbahan serat linen organik warna sage green seperti yang tergantung di hanger Foto 3.'
+            },
+            {
+                id: 'gs-08',
+                name: 'Celana Trousers Linen "Khaki Cream"',
+                category: 'pria',
+                price: 359000,
+                oldPrice: 429000,
+                rating: 4.8,
+                reviewsCount: 51,
+                image: getIGProductSVG('khaki-trousers'),
+                badge: 'Foto 3 & 4 • Chino Fit',
+                waterSaved: '2.900 Liter',
+                description: 'Celana chino/trousers potongan straight-fit dari bahan linen alami warna khaki cream seperti yang dipakai model pada Foto 4.'
+            },
+            {
+                id: 'gs-09',
+                name: 'Backpack Kanvas Eco "Nusantara Cream"',
+                category: 'aksesori',
+                price: 219000,
+                oldPrice: 269000,
+                rating: 5.0,
+                reviewsCount: 42,
+                image: getIGProductSVG('canvas-backpack'),
+                badge: 'Foto 3 • Eco Bag',
+                waterSaved: '1.100 Liter',
+                description: 'Tas ransel kanvas linen warna cream natural seperti yang berada di bagian bawah hanger Foto 3. Kuat dan bebas plastik.'
+            },
+            {
+                id: 'gs-10',
+                name: 'Tote Bag Kanvas Eco "Natural Earth"',
+                category: 'aksesori',
+                price: 139000,
+                oldPrice: 179000,
+                rating: 4.9,
+                reviewsCount: 88,
+                image: getIGProductSVG('canvas-tote'),
+                badge: 'Foto 1 & 2 • Zero-Waste',
+                waterSaved: '900 Liter',
+                description: 'Tas tote bag kanvas linen serbaguna yang dibawa model wanita pada Foto 1 & 2. Ideal untuk belanja bebas kantong plastik.'
+            }
+        ];
+
+        // Global Application State
+        let cart = [];
+        let activeCategory = 'all';
+        let selectedSize = 'M';
+
+        // Initialize on DOM Loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            calculateEcoImpact();
+            updateCartUI();
+        });
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if(btn.dataset.cat === cat) {
+                    btn.classList.remove('bg-white', 'text-sage-800', 'border', 'border-earth-200');
+                    btn.classList.add('bg-sage-700', 'text-white', 'shadow-sm');
+                } else {
+                    btn.classList.remove('bg-sage-700', 'text-white', 'shadow-sm');
+                    btn.classList.add('bg-white', 'text-sage-800', 'border', 'border-earth-200');
+                }
+            });
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            const sortVal = document.getElementById('sortSelect').value;
+
+            let filtered = products.filter(p => {
+                const matchCat = (activeCategory === 'all' || p.category === activeCategory);
+                const matchSearch = p.name.toLowerCase().includes(searchVal) || p.description.toLowerCase().includes(searchVal);
+                return matchCat && matchSearch;
+            });
+
+            // Sorting logic
+            if (sortVal === 'price-low') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-high') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sortVal === 'eco-impact') {
+                filtered.sort((a, b) => b.reviewsCount - a.reviewsCount);
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-stone-500">
+                        <i class="fa-solid fa-leaf text-3xl mb-3 text-sage-400 block"></i>
+                        <p class="text-sm">Pakaian yang Anda cari tidak ditemukan.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(product => `
+                <div class="bg-white rounded-2xl overflow-hidden border border-earth-200 hover:border-sage-500 transition-all duration-300 flex flex-col group eco-card-shadow">
+                    <!-- Product Image -->
+                    <div class="relative aspect-[4/5] overflow-hidden bg-earth-100">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/e2ebe2/283618?text=GreenStyle'">
+                        
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-earth-200 text-sage-800 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                            <i class="fa-solid fa-droplet text-blue-500 mr-1"></i> ${product.waterSaved}
+                        </span>
+
+                        <!-- Quick Action Hover Overlay -->
+                        <div class="absolute inset-0 bg-sage-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                            <button onclick="openQuickView('${product.id}')" class="w-10 h-10 rounded-full bg-white text-sage-800 hover:bg-sage-600 hover:text-white transition-colors flex items-center justify-center shadow-md" title="Lihat Detail">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                            <button onclick="addToCart('${product.id}')" class="w-10 h-10 rounded-full bg-sage-600 text-white hover:bg-sage-500 transition-colors flex items-center justify-center shadow-md font-bold" title="Tambah Keranjang">
+                                <i class="fa-solid fa-cart-plus text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Details Body -->
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] text-stone-500 mb-1">
+                                <span class="bg-sage-100 text-sage-800 px-2 py-0.5 rounded font-medium">${product.badge}</span>
+                                <span class="text-amber-500 font-semibold"><i class="fa-solid fa-star mr-1"></i>${product.rating} (${product.reviewsCount})</span>
+                            </div>
+                            <h3 class="font-serif text-base font-bold text-sage-900 group-hover:text-sage-600 transition-colors line-clamp-1">${product.name}</h3>
+                            <p class="text-[11px] text-stone-500 line-clamp-2 mt-1 font-light">${product.description}</p>
+                        </div>
+
+                        <div class="pt-2 border-t border-earth-100 flex items-center justify-between">
+                            <div>
+                                <p class="text-[11px] text-stone-400 line-through">Rp ${product.oldPrice.toLocaleString('id-ID')}</p>
+                                <p class="text-base font-bold text-sage-800">Rp ${product.price.toLocaleString('id-ID')}</p>
+                            </div>
+                            <button onclick="addToCart('${product.id}')" class="px-3.5 py-2 rounded-xl bg-sage-100 text-sage-800 hover:bg-sage-600 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                                <span>Beli</span>
+                                <i class="fa-solid fa-plus text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function handleSearch() {
+            renderProducts();
+        }
+
+        function handleSearchMobile(val) {
+            document.getElementById('searchInput').value = val;
+            renderProducts();
+        }
+
+        function calculateEcoImpact() {
+            const count = parseInt(document.getElementById('clothesCount').value);
+            const material = document.getElementById('calcMaterial').value;
+            
+            document.getElementById('clothesDisplay').textContent = `${count} Pakaian`;
+
+            let waterMultiplier = 2295; // default savings per item in Liters
+            let co2Multiplier = 4.5; // kg of CO2 saved per item
+
+            if (material === 'bamboo') {
+                waterMultiplier = 2500;
+                co2Multiplier = 5.2;
+            } else if (material === 'tencel') {
+                waterMultiplier = 2350;
+                co2Multiplier = 4.8;
+            } else if (material === 'recycled') {
+                waterMultiplier = 1900;
+                co2Multiplier = 6.0;
+            }
+
+            const totalWater = Math.round(count * waterMultiplier);
+            const totalCO2 = (count * co2Multiplier).toFixed(1);
+
+            document.getElementById('waterSavedOutput').textContent = `${totalWater.toLocaleString('id-ID')} L`;
+            document.getElementById('co2SavedOutput').textContent = `${totalCO2.replace('.', ',')} kg`;
+        }
+
+        function openQuickView(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('qvImage').src = product.image;
+            document.getElementById('qvBadge').textContent = product.badge;
+            document.getElementById('qvTitle').textContent = product.name;
+            document.getElementById('qvPrice').textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
+            document.getElementById('qvOldPrice').textContent = `Rp ${product.oldPrice.toLocaleString('id-ID')}`;
+            document.getElementById('qvDescription').textContent = product.description;
+            document.getElementById('qvWaterSaved').textContent = product.waterSaved;
+
+            const addBtn = document.getElementById('qvAddToCartBtn');
+            addBtn.onclick = () => {
+                addToCart(product.id, selectedSize);
+                closeQuickView();
+            };
+
+            const modal = document.getElementById('quickViewModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeQuickView() {
+            const modal = document.getElementById('quickViewModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function selectSize(btn) {
+            document.querySelectorAll('.size-btn').forEach(b => {
+                b.classList.remove('bg-sage-700', 'text-white');
+                b.classList.add('border-earth-200', 'text-sage-800');
+            });
+            btn.classList.add('bg-sage-700', 'text-white');
+            selectedSize = btn.textContent;
+        }
+
+        function addToCart(productId, size = 'M') {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    size: size,
+                    qty: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`"${product.name}" (Ukuran ${size}) ditambahkan ke keranjang.`);
+        }
+
+        function updateCartQty(index, change) {
+            if (cart[index]) {
+                cart[index].qty += change;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cartItemsContainer');
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            document.getElementById('cartCountBadge').textContent = totalCount;
+            document.getElementById('cartDrawerCount').textContent = `(${totalCount})`;
+            document.getElementById('cartSubtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            document.getElementById('cartTotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            document.getElementById('checkoutTotalDisplay').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            checkoutBtn.disabled = cart.length === 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="h-64 flex flex-col items-center justify-center text-center text-stone-400">
+                        <i class="fa-solid fa-bag-shopping text-4xl mb-3 text-stone-300"></i>
+                        <p class="text-xs">Keranjang Anda masih kosong.</p>
+                        <a href="#katalog" onclick="toggleCartDrawer()" class="text-xs text-sage-600 font-bold mt-2 hover:underline">Mulai Belanja Eco →</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map((item, index) => `
+                <div class="p-3 bg-earth-100 rounded-xl border border-earth-200 flex gap-3 items-center">
+                    <img src="${item.image}" class="w-16 h-16 rounded-lg object-cover border border-earth-200" alt="${item.name}">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="text-xs font-bold text-sage-900 truncate">${item.name}</h4>
+                        <p class="text-[10px] text-sage-600 font-semibold mt-0.5">Ukuran: ${item.size}</p>
+                        <p class="text-xs font-bold text-sage-800 mt-1">Rp ${item.price.toLocaleString('id-ID')}</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white border border-earth-200 rounded-lg px-2 py-1 text-xs">
+                        <button onclick="updateCartQty(${index}, -1)" class="text-stone-400 hover:text-sage-800 font-bold">-</button>
+                        <span class="font-bold text-sage-900 px-1">${item.qty}</span>
+                        <button onclick="updateCartQty(${index}, 1)" class="text-stone-400 hover:text-sage-800 font-bold">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const panel = document.getElementById('cartPanel');
+
+            if (drawer.classList.contains('pointer-events-none')) {
+                drawer.classList.remove('pointer-events-none', 'opacity-0');
+                panel.classList.remove('translate-x-full');
+            } else {
+                panel.classList.add('translate-x-full');
+                drawer.classList.add('opacity-0');
+                setTimeout(() => {
+                    drawer.classList.add('pointer-events-none');
+                }, 300);
+            }
+        }
+
+        function openCheckoutModal() {
+            if (cart.length === 0) return;
+            toggleCartDrawer();
+
+            const modal = document.getElementById('checkoutModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkoutModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            closeCheckoutModal();
+            cart = [];
+            updateCartUI();
+            showToast('🌱 Terima kasih! Pesanan Anda dikonfirmasi. Tim kami akan menghubungi via WhatsApp 089528328892.');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgElem = document.getElementById('toastMessage');
+            
+            msgElem.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
